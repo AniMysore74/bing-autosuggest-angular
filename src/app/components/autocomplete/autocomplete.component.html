@@ -1,0 +1,7 @@
+<div class="row justify-content-center">
+  <div class="col col-lg-4 input-group">
+    <input type="text" placeholder="Start typing" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [class.is-invalid]="searchFailed"/>
+    <span class="input-group-addon" *ngIf="searching"><i class="fa fa-spinner fa-pulse fa-fw"></i></span>
+  </div>
+</div>
+<p class="invalid-feedback text-center" *ngIf="searchFailed">Sorry, please type slower<br>Free tier of the API has limited requests</p>
